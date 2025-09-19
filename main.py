@@ -1,14 +1,16 @@
-# 初始能力值
-ability = 1
-# 遍历365天
-for day in range（1, 366）:
-    # 计算当天在周期内的位置（1 - 7）
-    day_in_cycle = day % 7
-    # 若为0，说明是第7天，修正为7
-    if day_in_cycle == 0:
-        day_in_cycle = 7
-    # 第4 - 7天，能力值增长1%
-    if 4 ＜= day_in_cycle ＜= 7:
-        ability *= 1.01
-# 输出结果，保留6位小数
-print（"连续学习365天后的能力值为：{:.6f}".format（ability））
+# 从键盘输入一个五位数
+num = int（input（"请输入一个五位数："））
+original_num = num  # 保存原数，用于最后比较
+reverse_num = 0
+while num ＞ 0:
+    # 取出最后一位数字
+    digit = num % 10
+    # 构建反转后的数
+    reverse_num = reverse_num * 10 + digit
+    # 去掉最后一位数字
+    num = num // 10
+# 判断是否为回文数
+if original_num == reverse_num:
+    print（f"{original_num} 是回文数"）
+else:
+    print（f"{original_num} 不是回文数"）
