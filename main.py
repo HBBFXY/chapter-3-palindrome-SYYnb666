@@ -1,5 +1,5 @@
 # 从键盘输入一个五位数
-num = int(input（"请输入一个五位数："))
+num = float(input（"请输入一个五位数："))
 original_num = num  # 保存原数，用于最后比较
 reverse_num = 0
 while num > 0:
